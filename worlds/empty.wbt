@@ -3,44 +3,61 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.06206074377412521 -0.9922540660724999 -0.10761195307582366 2.15780801956852
-  position -0.6575992973010202 0.17348632283682153 -0.3155164764757784
+  orientation -0.23397841008673206 0.9518332182277385 0.1981606123615673 1.4229874371995048
+  position 1.5543593396520905 0.5571549790021821 0.357695320375803
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
-  translation 0 0 -0.13
-  rotation 0 0 1 4.692820414042842e-06
+  translation 0 0 0.05
   floorSize 2 2
+  floorAppearance PBRAppearance {
+    roughness 1
+    roughnessMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/appearances/protos/textures/parquetry/chequered_parquetry_roughness.jpg"
+      ]
+    }
+    metalness 0
+    normalMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/appearances/protos/textures/parquetry/chequered_parquetry_normal.jpg"
+      ]
+    }
+    occlusionMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/appearances/protos/textures/parquetry/chequered_parquetry_occlusion.jpg"
+      ]
+    }
+  }
 }
 E-puck {
-  hidden position_0_0 4080.4321406499544
-  hidden position_0_1 8401.121638679972
-  hidden linearVelocity_0 0.01948228967934301 1.633410129856867e-07 0.022004615596977504
-  hidden angularVelocity_0 -2.379854251581412e-06 1.0291654398131356 -4.538200064915434e-06
-  hidden translation_1 -0.026000000000000006 0.02 0
-  hidden rotation_1 1 0 0 3.638309016776847
-  hidden linearVelocity_1 0.0016740390296996444 3.4133117091177677e-08 0.0019478402947929341
-  hidden angularVelocity_1 -2.3575656453169986e-06 1.029165439842686 -4.5420657470880716e-06
-  hidden translation_2 0.026000000000000054 0.02 0
-  hidden rotation_2 1 0 0 5.780302326315195
-  hidden linearVelocity_2 0.037237594212144814 3.114904730358058e-07 0.04211897946235904
-  hidden angularVelocity_2 2.195927548783089 1.0497600003349583 -1.9398550543995465
-  translation 0.0031252241238421195 -8.163643198665603e-05 0.03339151613651019
-  rotation 0.00031239597112112436 -0.9999999246626975 -0.00023039825561177815 2.398603363375579
+  hidden position_0_0 33.35840936986824
+  hidden position_0_1 31.079674972288874
+  hidden linearVelocity_0 0.04073437460587909 -1.8303927867461168e-08 -0.04410863893326867
+  hidden angularVelocity_0 -0.001972139941930424 8.915069235145825e-06 -0.0018294651807137445
+  hidden translation_1 -0.0259999999999999 0.02 0
+  hidden rotation_1 1 0 0 4.340702473209278
+  hidden linearVelocity_1 0.04074355234318687 1.3886526311048925e-07 -0.04411804220862309
+  hidden angularVelocity_1 -2.2059146678749006 4.002820483913715e-06 -2.0371764364423104
+  hidden translation_2 0.02599999999999997 0.02 0
+  hidden rotation_2 -1 0 0 5.946933743570528
+  hidden linearVelocity_2 0.040743491442159344 -1.6482805856872725e-07 -0.04411895673001564
+  hidden angularVelocity_2 -2.205914786779913 3.8860226309894995e-06 -2.037176327362398
+  translation 0.10334960268889286 -6.396384186395203e-05 -0.20390462861751055
+  rotation 0.00044773414882782987 -0.9999998840218848 0.00017745520343184548 0.7456492224018542
   controller "my_controller_line_follower"
   groundSensorsSlot [
     DistanceSensor {
-      translation 0 -0.01 0
-      name "ir0"
+      translation 0 0.02 0
+      name "ir1"
       type "infra-red"
     }
     DistanceSensor {
-      translation 0 0.02 0
-      rotation 0 1 0 4.692820414042842e-06
-      name "ir1"
+      translation 0 -0.01 0
+      name "ir0"
       type "infra-red"
     }
   ]
